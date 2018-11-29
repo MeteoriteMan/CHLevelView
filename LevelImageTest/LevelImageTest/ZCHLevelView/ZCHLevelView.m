@@ -7,10 +7,11 @@
 //
 
 #import "ZCHLevelView.h"
+#import <Masonry.h>
 
 @interface ZCHLevelView()
 
-@property (nonatomic, strong) NSMutableArray<UIImageView *> *imageViews;
+@property (nonatomic, strong) NSArray <UIImageView *> *imageViews;
 
 @end
 
@@ -32,21 +33,39 @@
 }
 
 - (void)setupUI {
-    self.backgroundColor = [UIColor redColor];
-    self.imageViews = [NSMutableArray array];
+    NSMutableArray *arrayM = [NSMutableArray array];
     for (int i = 0; i < 5; i++) {
         UIImageView *imageView = [[UIImageView alloc] init];
         [self addSubview:imageView];
-        [self.imageViews addObject:imageView];
+        [arrayM addObject:imageView];
     }
+    self.imageViews = arrayM.copy;
+}
+
+- (void)setImageViews:(NSArray<UIImageView *> *)imageViews {
+    _imageViews = imageViews;
+    UIView *lastView;
+    for (UIImageView *imageView in imageViews) {
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            if (lastView) {
+                make.left.equalTo(lastView.mas_right).offset(0);
+            } else {
+                make.left.offset(0);
+            }
+            make.height.equalTo(self.mas_height);
+            make.width.equalTo(imageView.mas_height);
+        }];
+        lastView = imageView;
+    }
+    [lastView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(0);
+    }];
 }
 
 - (void)setLevel:(CGFloat)level {
     _level = level;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"BundleTest.bundle" ofType:nil];
     NSBundle *bundle = [NSBundle bundleWithPath:path];
-    //image Test
-//    NSString *imagePath = [bundle pathForResource:@"Images/full_star.png" ofType:nil];
     int temp = level;
     for (int i = 0; i < temp; i++) {
         self.imageViews[i].image = [UIImage imageNamed:[bundle pathForResource:@"Images/full_star.png" ofType:nil]];
@@ -59,25 +78,5 @@
         self.imageViews[i].image = [UIImage imageNamed:[bundle pathForResource:@"Images/empty_star.png" ofType:nil]];
     }
 }
-
-- (void)layoutSubviews {
-    [super layoutSubviews]; //!!!! 一定要写super
-    CGFloat W = 0.0;
-    CGFloat H = 0.0;
-    for (int i = 0; i < self.imageViews.count; i++) {
-        // 获取imageView
-        UIImageView *imageView = self.imageViews[i];
-        imageView.backgroundColor = [UIColor redColor];
-        CGFloat w = self.bounds.size.height;
-        CGFloat h = w;
-        CGFloat x = i * w; // 第0个图片  就是x 就是  0 * w
-        CGFloat y = 0;
-        imageView.frame = CGRectMake(x, y, w, h);
-        W = w;
-        H = h;
-    }
-    self.bounds = CGRectMake(0, 0, W, H);
-}
-
 
 @end

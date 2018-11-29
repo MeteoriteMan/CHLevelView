@@ -15,9 +15,11 @@
 		439EF9C220075DAF00AEC06C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439EF9C120075DAF00AEC06C /* main.m */; };
 		439EF9CD20075DE100AEC06C /* ZCHLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 439EF9CB20075DE100AEC06C /* ZCHLevelView.m */; };
 		439EF9DB2007689E00AEC06C /* BundleTest.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 439EF9DA2007689E00AEC06C /* BundleTest.bundle */; };
+		FC060B0F8DA33EA59E7607B6 /* libPods-LevelImageTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FED9D4CA38F07C826C6EC2 /* libPods-LevelImageTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350508BAD085E38AA2B7B37B /* Pods-LevelImageTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LevelImageTest.debug.xcconfig"; path = "Target Support Files/Pods-LevelImageTest/Pods-LevelImageTest.debug.xcconfig"; sourceTree = "<group>"; };
 		439EF9AF20075DAF00AEC06C /* LevelImageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LevelImageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439EF9B220075DAF00AEC06C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		439EF9B320075DAF00AEC06C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		439EF9CB20075DE100AEC06C /* ZCHLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCHLevelView.m; sourceTree = "<group>"; };
 		439EF9CC20075DE100AEC06C /* ZCHLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHLevelView.h; sourceTree = "<group>"; };
 		439EF9DA2007689E00AEC06C /* BundleTest.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BundleTest.bundle; sourceTree = "<group>"; };
+		5A7E4A0A6D35ABB562D9EE94 /* Pods-LevelImageTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LevelImageTest.release.xcconfig"; path = "Target Support Files/Pods-LevelImageTest/Pods-LevelImageTest.release.xcconfig"; sourceTree = "<group>"; };
+		96FED9D4CA38F07C826C6EC2 /* libPods-LevelImageTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LevelImageTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC060B0F8DA33EA59E7607B6 /* libPods-LevelImageTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				439EF9B120075DAF00AEC06C /* LevelImageTest */,
 				439EF9B020075DAF00AEC06C /* Products */,
+				6B909FFC1AD25A9007B23DBB /* Pods */,
+				93041D422B888A8447DDC289 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +94,23 @@
 			path = ZCHLevelView;
 			sourceTree = "<group>";
 		};
+		6B909FFC1AD25A9007B23DBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				350508BAD085E38AA2B7B37B /* Pods-LevelImageTest.debug.xcconfig */,
+				5A7E4A0A6D35ABB562D9EE94 /* Pods-LevelImageTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93041D422B888A8447DDC289 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96FED9D4CA38F07C826C6EC2 /* libPods-LevelImageTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +118,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439EF9C520075DAF00AEC06C /* Build configuration list for PBXNativeTarget "LevelImageTest" */;
 			buildPhases = (
+				CFEAA338CC986A24FE613ECC /* [CP] Check Pods Manifest.lock */,
 				439EF9AB20075DAF00AEC06C /* Sources */,
 				439EF9AC20075DAF00AEC06C /* Frameworks */,
 				439EF9AD20075DAF00AEC06C /* Resources */,
@@ -113,7 +138,7 @@
 		439EF9A720075DAF00AEC06C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "张晨晖";
 				TargetAttributes = {
 					439EF9AE20075DAF00AEC06C = {
@@ -153,6 +178,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CFEAA338CC986A24FE613ECC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LevelImageTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		439EF9AB20075DAF00AEC06C /* Sources */ = {
@@ -202,6 +252,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -209,6 +260,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -257,6 +309,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -264,6 +317,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -294,6 +348,7 @@
 		};
 		439EF9C620075DAF00AEC06C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 350508BAD085E38AA2B7B37B /* Pods-LevelImageTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +363,7 @@
 		};
 		439EF9C720075DAF00AEC06C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7E4A0A6D35ABB562D9EE94 /* Pods-LevelImageTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
