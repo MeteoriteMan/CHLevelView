@@ -54,6 +54,7 @@
             }
             make.height.equalTo(self.mas_height);
             make.width.equalTo(imageView.mas_height);
+            make.centerY.equalTo(self);
         }];
         lastView = imageView;
     }
