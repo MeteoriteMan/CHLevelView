@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "ZCHLevelView.h"
+#import <Masonry.h>
+#import "CHLevelView.h"
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet ZCHLevelView *viewLevelStart;
+@property (nonatomic ,strong) CHLevelView *viewLevelStart;
 
 @end
 
@@ -20,7 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [_viewLevelStart setLevel:3.5];
+    self.viewLevelStart = [[CHLevelView alloc] init];
+    self.viewLevelStart.allowGestureRecognizer = YES;
+    self.viewLevelStart.starNumber = 4;
+    [self.view addSubview:self.viewLevelStart];
+    [self.viewLevelStart mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(100);
+        make.centerX.equalTo(self.view);
+        make.height.offset(70);
+    }];
+    [_viewLevelStart setLevel:2];
 }
 
 

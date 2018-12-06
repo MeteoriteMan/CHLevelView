@@ -13,7 +13,7 @@
 		439EF9BC20075DAF00AEC06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439EF9BB20075DAF00AEC06C /* Assets.xcassets */; };
 		439EF9BF20075DAF00AEC06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439EF9BD20075DAF00AEC06C /* LaunchScreen.storyboard */; };
 		439EF9C220075DAF00AEC06C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439EF9C120075DAF00AEC06C /* main.m */; };
-		439EF9CD20075DE100AEC06C /* ZCHLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 439EF9CB20075DE100AEC06C /* ZCHLevelView.m */; };
+		439EF9CD20075DE100AEC06C /* CHLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 439EF9CB20075DE100AEC06C /* CHLevelView.m */; };
 		439EF9DB2007689E00AEC06C /* BundleTest.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 439EF9DA2007689E00AEC06C /* BundleTest.bundle */; };
 		FC060B0F8DA33EA59E7607B6 /* libPods-LevelImageTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FED9D4CA38F07C826C6EC2 /* libPods-LevelImageTest.a */; };
 /* End PBXBuildFile section */
@@ -30,8 +30,8 @@
 		439EF9BE20075DAF00AEC06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439EF9C020075DAF00AEC06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439EF9C120075DAF00AEC06C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		439EF9CB20075DE100AEC06C /* ZCHLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCHLevelView.m; sourceTree = "<group>"; };
-		439EF9CC20075DE100AEC06C /* ZCHLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHLevelView.h; sourceTree = "<group>"; };
+		439EF9CB20075DE100AEC06C /* CHLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLevelView.m; sourceTree = "<group>"; };
+		439EF9CC20075DE100AEC06C /* CHLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLevelView.h; sourceTree = "<group>"; };
 		439EF9DA2007689E00AEC06C /* BundleTest.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BundleTest.bundle; sourceTree = "<group>"; };
 		5A7E4A0A6D35ABB562D9EE94 /* Pods-LevelImageTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LevelImageTest.release.xcconfig"; path = "Target Support Files/Pods-LevelImageTest/Pods-LevelImageTest.release.xcconfig"; sourceTree = "<group>"; };
 		96FED9D4CA38F07C826C6EC2 /* libPods-LevelImageTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LevelImageTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +70,7 @@
 		439EF9B120075DAF00AEC06C /* LevelImageTest */ = {
 			isa = PBXGroup;
 			children = (
-				439EF9CA20075DE100AEC06C /* ZCHLevelView */,
+				439EF9CA20075DE100AEC06C /* CHLevelView */,
 				439EF9B220075DAF00AEC06C /* AppDelegate.h */,
 				439EF9B320075DAF00AEC06C /* AppDelegate.m */,
 				439EF9B520075DAF00AEC06C /* ViewController.h */,
@@ -84,14 +84,14 @@
 			path = LevelImageTest;
 			sourceTree = "<group>";
 		};
-		439EF9CA20075DE100AEC06C /* ZCHLevelView */ = {
+		439EF9CA20075DE100AEC06C /* CHLevelView */ = {
 			isa = PBXGroup;
 			children = (
 				439EF9DA2007689E00AEC06C /* BundleTest.bundle */,
-				439EF9CC20075DE100AEC06C /* ZCHLevelView.h */,
-				439EF9CB20075DE100AEC06C /* ZCHLevelView.m */,
+				439EF9CC20075DE100AEC06C /* CHLevelView.h */,
+				439EF9CB20075DE100AEC06C /* CHLevelView.m */,
 			);
-			path = ZCHLevelView;
+			path = CHLevelView;
 			sourceTree = "<group>";
 		};
 		6B909FFC1AD25A9007B23DBB /* Pods */ = {
@@ -210,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439EF9B720075DAF00AEC06C /* ViewController.m in Sources */,
-				439EF9CD20075DE100AEC06C /* ZCHLevelView.m in Sources */,
+				439EF9CD20075DE100AEC06C /* CHLevelView.m in Sources */,
 				439EF9C220075DAF00AEC06C /* main.m in Sources */,
 				439EF9B420075DAF00AEC06C /* AppDelegate.m in Sources */,
 			);
@@ -352,7 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XCNQSAZY6S;
+				DEVELOPMENT_TEAM = F22VTWNS57;
 				INFOPLIST_FILE = LevelImageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zch.LevelImageTest;
@@ -367,7 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XCNQSAZY6S;
+				DEVELOPMENT_TEAM = F22VTWNS57;
 				INFOPLIST_FILE = LevelImageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zch.LevelImageTest;
