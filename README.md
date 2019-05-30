@@ -1,5 +1,4 @@
-# CHDivideEquallyChannelView
-
+# CHLevelView
 ## 效果
 ![](https://github.com/MeteoriteMan/Assets/blob/master/gif/CHLevelView-iPhone%208.gif?raw=true)
 
